@@ -24,7 +24,7 @@ students = sorted(students, key=sort_by_name)
 
 print("Студенты с неудовлетворительными оценками:")
 
-# Затем проходим по отсортированному списку и выводим тех, у кого есть двойки (< 3)
+# Затем проходим по отсортированному списку и выводим группу, студента и оценки
 for st in students:
   if any(grade < 3 for grade in st.progress):
-    print(st.full_name, st.progress)
+    print(f"Группа: {st.group_number} | Студент: {st.full_name}, Оценки: {st.progress}")
