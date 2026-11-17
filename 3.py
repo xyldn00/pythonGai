@@ -1,27 +1,12 @@
-class BankAccount:
-    def __init__(self, account_number, balance=0):
-        self.account_number = account_number
-        self.balance = balance
+import math
 
-    def add(self, amount):
-        if amount > 0:
-            self.balance += amount
-            print(f"Пополнение на {amount}. Баланс: {self.balance}")
-        else:
-            print("Сумма пополнения должна быть положительной!")
+pi = 3.14
 
-    def withdraw(self, amount):
-        if amount > self.balance:
-            print("Недостаточно средств на счете!")
-        elif amount <= 0:
-            print("Сумма снятия должна быть положительной!")
-        else:
-            self.balance -= amount
-            print(f"Снятие {amount}. Баланс: {self.balance}")
+S = float(input("Введите площадь круга S: "))
 
-#Пример 
-account = BankAccount("123456789", 1000)
+R = math.sqrt(S / pi)
+D = 2 * R
+L = 2 * pi * R
 
-account.add(500)
-account.withdraw(200)    
-account.withdraw(2000)   
+print(f"Диаметр D: {D}")
+print(f"Длина окружности L: {L}")
